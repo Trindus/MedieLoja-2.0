@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "MedievalSharp";
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "MedievalSharp";
+    src: url("fonte/MedievalSharp.ttf   ");
+}
+
+.header {
+    width: 100%;
+    height: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100000;
+
+}
+
+.topo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    background-image: url(img/marrom-marmorizado-fundo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.title>a>p {
+    color: white;
+    font-size: 40px;
+    margin-left: 30px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row-reverse;
+    color: white;
+}
+
+.icons i {
+    size: 30px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-image: url(img/fundoMetal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.blocos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.blocos p a {
+    padding: 5px 25px;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    transition: 0.5s;
+}
+
+.blocos p a:hover {
+    cursor: pointer;
+    background-color: rgb(43, 41, 41);
+    padding: 7px 27px;
+    border: solid rgb(177, 177, 177) 2px;
+    border-radius: 4px;
+
+}
+
+.barras {
+    display: none;
+    background-color: transparent;
+    margin-right: 10px;
+}
+
+.barras div {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    margin: 4px;
+    border-radius: 4px;
+}
+
+@media (max-width: 1200px) {
+    .blocos {
+        display: none;
+        transform: translateX(120%) translateY(75%);
+        size: 0;
+        transition: 0.7s;
+    }
+
+    .blocos p a {
+        width: 200px;
+    }
+
+    .barras {
+        cursor: pointer;
+        display: inline;
+        position: relative;
+        float: right;
+    }
+
+    .blocos-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        transform: translateY(112px);
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        right: 0;
+        width: 200px;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: end;
+        height: 30px;
+        background-color: rgb(43, 41, 41);
+        box-shadow: 1px 0px 4px 1px grey;
+        z-index: 100;
+        padding: 10px;
+    }
+
+    .blocos p a {
+        display: inline-block;
+        padding: 5px 25px;
+        cursor: pointer;
+        color: white;
+        transition: 0.3s;
+
+        background-image: url(img/fundoMetal.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .blocos p a:hover {
+        background-color: rgb(43, 41, 41);
+        color: white;
+        border: solid 2px rgb(177, 177, 177);
+        border-radius: 4px;
+        padding: 7px 27px;
+    }
+
+}
+
+#p1, #p2, #p3 {
+    transition: cubic-bezier(1, 0, 0, 1) 1.5s;
+}
+
+
+.p1-active {
+    transform: translateY(8px) rotate(765deg);
+}
+
+.p2-active {
+    transform: rotate(405deg);
+
+}
+
+.p3-active {
+    transform: translateY(-8px) rotate(498deg);
+
+
+}
+
+
+
+
+
+
+
+
+body {
+    background-image: url(img/fundo.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.corpo {
+    position: relative;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*Faz com que os itens que estao em flex se mantenham na msm linha*/
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.corpo>div {
+    display: flex;
+    color: white;
+    width: 300px;
+    padding: 30px;
+    margin: 15px;
+    background-image: url(img/fundoMetal.jpg);
+    opacity: 80%;
+    border-radius: 7px;
+    transition: 0.5s;
+    box-shadow: 4px 4px 10px 0px rgb(43, 41, 41);
+}
+
+
+.corpo>div:hover {
+    transform: translateY(-8px);
+}
+
+
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.form>form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.form p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.form input:is([type="text"]) {
+    width: 200px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.enviar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.form input:is([type="submit"]) {
+    border: solid 2px rgb(177, 177, 177);
+    border-radius: 4px;
+    padding: 5px 15px;
+    font-size: 16px;
+    width: 75px;
+}
+
+.form input:is([type="submit"]):hover {
+    cursor: pointer;
+    text-align: center;
+    justify-self: center;
+
+}
+#foto{
+    display: none;
+    size: 0;
+}
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 30px;
+    margin-left: 17px;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    color: #b9b9b9;
+    font-size: 20px;
+    opacity: 80%;
+}
+label:hover{
+    cursor: pointer;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.cards div {
+    justify-content: center;
+}
+
+.ftItem {
+    margin: 0 30px;
+}
+
+.ftItem p {
+    margin-bottom: 15px;
+}
+
+.ftItem {
+    color: white;
+    text-align: center;
+    width: 300px;
+    padding: 30px;
+    margin: 15px 5px;
+    background-image: url(img/fundoMetal.jpg);
+    opacity: 80%;
+    border-radius: 7px;
+    transition: 0.5s;
+    box-shadow: 2px 2px 10px 0px rgb(0, 0, 0);
+
+}
+
+.ftItem:hover {
+    transform: translateY(-8px);
+}
+
+.botoesCard>a>img {
+    max-width: 30px;
+    filter: invert();
+    margin: 0 45px;
+    margin-top: 65px;
+}
